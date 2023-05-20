@@ -3,11 +3,11 @@ name: Deploy Website
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync src s3://${{ secrets.AWS_S3_BUCKET }} --exclude ".git*"  --acl private --follow-symlinks --delete
+          aws s3 sync index.html s3://${{ secrets.AWS_S3_BUCKET }} --exclude ".git*" --acl private --follow-symlinks --delete
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION }} --paths "/*" 

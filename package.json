@@ -1,0 +1,28 @@
+{
+  "name": "wagonkered-website",
+  "version": "1.0.0",
+  "description": "Frontend code for the Wagonkered website",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint \"./src/*.js\" && npx stylelint \"./src/*.css\"",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagonkered/website.git"
+  },
+  "author": "Joshua Crunden",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/wagonkered/website/issues"
+  },
+  "homepage": "https://github.com/wagonkered/website#readme",
+  "dependencies": {
+    "eslint": "^8.40.0",
+    "jest": "^29.5.0"
+  },
+  "devDependencies": {
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard": "^33.0.0"
+  }
+}
