@@ -1,11 +1,12 @@
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
 
-module.exports = {
+module.exports = merge(common, {
 	mode: "development",
 	devtool: "inline-source-map",
 	devServer: {
 		static: "./dist",
+		watchFiles: [ "./src/*" ],
 	},
 	module: {
 		rules: [
@@ -18,4 +19,4 @@ module.exports = {
 			}
 		]
 	}
-};
+});
