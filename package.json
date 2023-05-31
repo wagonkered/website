@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "npx eslint \"./src/*.js\" && npx stylelint \"./src/*.css\"",
     "test": "jest",
-    "build": "webpack --config webpack.prod.js",
+    "prod:build": "webpack --config webpack.prod.js",
+    "prod:serve": "python3 -m http.server -d dist",
+    "prod:": "npm run prod:build && npm run prod:serve",
     "start": "webpack-dev-server --config webpack.dev.js --open"
   },
   "repository": {
@@ -31,6 +33,7 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.6",
+    "style-loader": "^3.3.3",
     "stylelint": "^15.6.2",
     "stylelint-config-standard": "^33.0.0",
     "webpack": "^5.83.1",
