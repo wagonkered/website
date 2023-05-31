@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: 16
 
+      - run: npm ci 
+
       - name: Deploy to S3
         run: |
           npm run prod:build
