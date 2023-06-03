@@ -1,0 +1,51 @@
+/* color palette idea: https://colorhunt.co/palette/e14d2afd841f3e6d9c001253 */
+* {
+  font-family: Lato;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  line-height: 150%;
+  color: #6f6f6f;
+}
+
+a {
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 1rem auto;
+}
+
+header img {
+  height: 7rem;
+  /*background-color: #3E6D9C;*/
+  /*background: linear-gradient(to right, white 0%,  #3E6D9C 20%, #3E6D9C 80%, white 100%);*/
+  background: radial-gradient(#3E6D9C 50%, white 70%);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+header ul {
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+header ul li {
+  list-style-type: none;
+  margin: 0rem 1rem;
+}
+
+.call-to-action {
+  background-color: #FD841F;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.4rem 1.25rem;
+}
