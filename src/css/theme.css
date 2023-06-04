@@ -13,8 +13,14 @@ a {
   font-weight: 700;
 }
 
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+}
+
 header {
   /*background: linear-gradient(to right, #3E6D9C 10rem, rgba(0, 0, 0, 0.0) 30rem);*/
+  position: relative;
 }
 
 nav {
@@ -64,10 +70,14 @@ header ul li a {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-image-text {
   color: #C9C9C9;
   font-size: 2rem;
   font-style: Italic;
+  width: 90%;
+  text-align: right;
 }
