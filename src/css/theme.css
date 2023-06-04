@@ -14,21 +14,22 @@ a {
 }
 
 header {
+  /*background: linear-gradient(to right, #3E6D9C 10rem, rgba(0, 0, 0, 0.0) 30rem);*/
+}
+
+nav {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  margin: 1rem auto;
 }
 
 header img {
   height: 7rem;
   
-  /* background-color: #3E6D9C; */
-
   /* background: linear-gradient(to right, white 0%,  #3E6D9C 20%, #3E6D9C 80%, white 100%); */
 
-  background: radial-gradient(#3E6D9C 50%, white 70%);
   padding: 1rem;
   border-radius: 8px;
 }
@@ -43,12 +44,30 @@ header ul {
 header ul li {
   list-style-type: none;
   margin: 0 1rem;
+  font-size: 1.25rem;
+}
+
+header ul li a {
+  color: #C9C9C9;
 }
 
 .call-to-action {
   background-color: #FD841F;
   border-radius: 8px;
-  color: white;
+  color: #C9C9C9;
   font-size: 1.25rem;
   padding: 0.4rem 1.25rem;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/hero-image.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-image-text {
+  color: #C9C9C9;
+  font-size: 2rem;
+  font-style: Italic;
 }
