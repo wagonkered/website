@@ -32,7 +32,7 @@ header {
   position: absolute;
   width: 100%;
 
-  /* background: linear-gradient(to right, #3E6D9C 10rem, rgba(0, 0, 0, 0.0) 30rem); */
+  /* background: linear-gradient(to right, #3E6D9C 10rem, rgb(0 0 0 / 0) 30rem); */
 
 }
 
@@ -89,7 +89,7 @@ header img {
     left: 0;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255 255 255 80%);
+    background-color: rgba(255 255 255 / 80%);
     backdrop-filter: blur(10px);
     transform: translateX(100%);
     transition: all 0.3s ease-in;
@@ -109,7 +109,7 @@ header img {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0 0 0 60%),rgba(0 0 0 60%)), url("../img/hero-image.jpeg");
+  background-image: linear-gradient(rgba(0 0 0 / 60%),rgba(0 0 0 / 60%)), url("../img/hero-image.jpeg");
   background-size: cover;
   background-position: center;
   height: 100vh;
