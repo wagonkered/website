@@ -6,11 +6,21 @@
   padding: 0;
   text-decoration: none;
   line-height: 150%;
-  color: #6f6f6f;
+  color: #6F6F6F;
+  overflow-x: clip;
+}
+
+.light-colour {
+  color: #C9C9C9;
 }
 
 a {
   font-weight: 700;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
 }
 
 .header-wrapper {
@@ -19,13 +29,29 @@ a {
 }
 
 header {
-  /*background: linear-gradient(to right, #3E6D9C 10rem, rgba(0, 0, 0, 0.0) 30rem);*/
-  position: relative;
+  position: absolute;
+  width: 100%;
+
+  /* background: linear-gradient(to right, #3E6D9C 10rem, rgba(0, 0, 0, 0.0) 30rem); */
+
+}
+
+.menu-icons {
+  height: 3rem;
+}
+
+.hamburger {
+  filter: invert(89%) sepia(3%) saturate(13%) hue-rotate(10deg) brightness(95%) contrast(82%);
+}
+
+.close {
+  filter: invert(48%) sepia(7%) saturate(8%) hue-rotate(330deg) brightness(86%) contrast(80%);
+  z-index: 10;
 }
 
 nav {
-  width: 90%;
-  margin: 0 auto;
+  position: relative;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,33 +66,50 @@ header img {
   border-radius: 8px;
 }
 
-header ul {
+.menu-items {
   flex-grow: 2;
   display: flex;
   justify-content: flex-end;
-  margin-right: 1rem;
 }
 
-header ul li {
+.menu-items li {
   list-style-type: none;
-  margin: 0 1rem;
+  margin: 1.25rem 1rem;
   font-size: 1.25rem;
 }
 
-header ul li a {
-  color: #C9C9C9;
+.mobile-menu {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255 255 255 80%);
+    backdrop-filter: blur(10px);
+    transform: translateX(100%);
+    transition: all 0.3s ease-in;
+}
+
+.mobile-menu-open {
+  transform: translateX(0%);
 }
 
 .call-to-action {
+  margin: 0 1rem;
   background-color: #FD841F;
   border-radius: 8px;
-  color: #C9C9C9;
+  color: white;
   font-size: 1.25rem;
   padding: 0.4rem 1.25rem;
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/hero-image.jpeg");
+  background-image: linear-gradient(rgba(0 0 0 60%),rgba(0 0 0 60%)), url("../img/hero-image.jpeg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -75,9 +118,9 @@ header ul li a {
 }
 
 .hero-image-text {
-  color: #C9C9C9;
   font-size: 2rem;
-  font-style: Italic;
+  font-style: italic;
   width: 90%;
+  margin: 0 auto;
   text-align: right;
 }

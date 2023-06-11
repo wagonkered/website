@@ -8,7 +8,7 @@
   font-family: Lato;
   src: url("../fonts/Lato-Italic.ttf");
   font-weight: 400;
-  font-style: Italic;
+  font-style: italic;
 }
 
 @font-face {
@@ -27,6 +27,6 @@
   font-family: Lato;
   src: url("../fonts/Lato-LightItalic.ttf");
   font-weight: 300;
-  font-style: Italic;
+  font-style: italic;
 }
 
