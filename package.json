@@ -4,7 +4,7 @@
   "description": "Frontend code for the Wagonkered website",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint \"./src/*.js\" && npx stylelint \"./src/*.css\"",
+    "lint": "npx eslint \"./src/js/*.js\" && npx stylelint \"./src/css/*.css\"",
     "test": "jest",
     "prod:build": "webpack --config webpack.prod.js",
     "prod:serve": "python3 -m http.server -d dist",
