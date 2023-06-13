@@ -51,7 +51,7 @@ header {
 
 nav {
   position: relative;
-  padding: 0 1rem;
+  padding: 0 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,6 +118,12 @@ header img {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  nav {
+    padding: 0 1rem;
+  }
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0 0 0 / 60%),rgba(0 0 0 / 60%)), url("../img/hero-image.jpeg");
   background-size: cover;
@@ -133,4 +139,26 @@ header img {
   width: 90%;
   margin: 0 auto;
   text-align: right;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #FD841F;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  padding: 3rem;
+  flex-basis: 50%;
+}
+
+.column-image {
+  max-height: 75vh;
+  max-width: 100%;
 }
