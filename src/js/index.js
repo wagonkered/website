@@ -21,14 +21,14 @@ close.addEventListener("click", () => {
 });
 
 function widthChange(mq) {
-	if(mq.matches) {
+	if (mq.matches) {
 		menuItems.classList.remove("mobile-menu");
-		menuItemLinks.forEach( e => e.classList.add("light-colour"));
+		menuItemLinks.forEach(e => e.classList.add("light-colour"));
 		hamburger.classList.add("hidden");
 		close.classList.add("hidden");
 	} else {
 		menuItems.classList.add("mobile-menu");
-		menuItemLinks.forEach( e => e.classList.remove("light-colour"));
+		menuItemLinks.forEach(e => e.classList.remove("light-colour"));
 		hamburger.classList.remove("hidden");
 	}
 }
@@ -38,3 +38,27 @@ widthChange(mq);
 
 mq.addEventListener("change", widthChange);
 
+/* GALLERY */
+const focusImageContainer = document.querySelector(".focus-image-background");
+const focusImage = focusImageContainer.querySelector("img");
+const body = document.querySelector("body");
+
+
+const galleryImages = document.querySelectorAll(".gallery-image img");
+galleryImages.forEach(e => {
+	e.addEventListener("click", event => {
+		const altTag = event.target.alt;
+		const imageSource = event.target.src;
+		focusImage.src = imageSource;
+		focusImage.alt = altTag;
+		focusImageContainer.classList.remove("hidden");
+		body.scroll = "no";
+		body.style.overflow = "hidden";
+	});
+});
+
+focusImageContainer.addEventListener("click", () => {
+	focusImageContainer.classList.add("hidden");
+	body.scroll = "yes";
+	body.style.overflow = "visible";
+});

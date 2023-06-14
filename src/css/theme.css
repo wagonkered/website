@@ -1,13 +1,19 @@
 /* color palette idea: https://colorhunt.co/palette/e14d2afd841f3e6d9c001253 */
+
+/* GENERAL */
+
 * {
   font-family: Lato, sans-serif;
-  font-weight: 400;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  line-height: 150%;
+  line-height: 2;
   color: #6F6F6F;
   overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .light-colour {
@@ -16,6 +22,10 @@
 
 a {
   font-weight: 700;
+}
+ 
+li {
+  list-style-type: none;
 }
 
 .hidden {
@@ -27,6 +37,8 @@ a {
   position: absolute;
   width: 100%;
 }
+
+/* HEADER */
 
 header {
   position: absolute;
@@ -48,6 +60,23 @@ header {
   filter: invert(48%) sepia(7%) saturate(8%) hue-rotate(330deg) brightness(86%) contrast(80%);
   z-index: 10;
 }
+
+.hamburger, .close {
+  height: 3rem;
+}
+
+.beer {
+  filter: invert(19%) sepia(11%) saturate(4374%) hue-rotate(312deg) brightness(91%) contrast(85%);
+  height: 2rem;
+  width: 2rem;
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.options {
+  margin-bottom: 1rem;
+}
+
 
 nav {
   position: relative;
@@ -74,7 +103,6 @@ header img {
 }
 
 .menu-items li {
-  list-style-type: none;
   margin: 1.25rem 1rem;
   font-size: 1.25rem;
 }
@@ -101,14 +129,14 @@ header img {
 }
 
 .call-to-action {
-  background-color: #FD841F;
+  background-color: #6E292C;
   border-radius: 8px;
   color: white;
   font-size: 1.25rem;
   padding: 0.4rem 1.25rem;
 }
 
-@media only screen and (max-width: 815px) {
+@media only screen and (width <= 815px) {
   header img {
     height: 4rem;
   }
@@ -118,7 +146,7 @@ header img {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (width <= 450px) {
   nav {
     padding: 0 1rem;
   }
@@ -141,16 +169,21 @@ header img {
   text-align: right;
 }
 
+/* SECTIONS */ 
+
+section:nth-of-type(even) {
+  background-color: #F8F8F8;
+}
+
 h1 {
   text-align: center;
-  font-weight: 700;
-  color: #FD841F;
+  font-weight: 300;
   text-transform: uppercase;
+  padding: 2rem 0;
 }
 
 .row {
   display: flex;
-  align-items: center;
 }
 
 .column {
@@ -158,7 +191,79 @@ h1 {
   flex-basis: 50%;
 }
 
-.column-image {
-  max-height: 75vh;
-  max-width: 100%;
+/* ABOUT */
+
+.text-block-header {
+  font-weight: 900;
 }
+
+.text-block, .text-block-header {
+  width: 80%;
+  margin: 0 auto 1rem;
+}
+
+.column-image {
+  max-height: 30vh;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* GALLERY */
+
+.gallery-container {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  width: 33%;
+  height: 20vw;
+  overflow: hidden;
+  background-color: #000;
+  cursor: pointer;
+}
+
+@media only screen and (width <= 700px) {
+  .gallery-image {
+    width: 100%;
+    height: 40vw;
+  }
+}
+
+.gallery-image img {
+  opacity: 0.6;
+  width: 100%;
+  transform: scale(1.30);
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.focus-image-background img {
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery-image img:hover {
+  opacity: 1;
+  height: auto;
+  transform: scale(1.20);
+}
+
+.focus-image-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0 0 0 60%);
+  transition: visibility 0.2s linear,opacity 0.2s linear;
+  cursor: pointer;
+  z-index: 2;
+}
+
