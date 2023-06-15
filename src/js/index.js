@@ -38,6 +38,24 @@ widthChange(mq);
 
 mq.addEventListener("change", widthChange);
 
+/* Sticky navigation */
+const about = document.querySelector("#about");
+console.log(about);
+
+const options = {
+	root: null,
+	rootMargin: "0px",
+	threshold: 1.0,
+};
+
+function handleIntersect(entry) {
+	console.log(entry);
+}
+
+const observer = new IntersectionObserver(handleIntersect, options);
+
+observer.observe(about);
+
 /* GALLERY */
 const focusImageContainer = document.querySelector(".focus-image-background");
 const focusImage = focusImageContainer.querySelector("img");
