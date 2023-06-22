@@ -40,7 +40,6 @@ mq.addEventListener("change", widthChange);
 
 /* Sticky navigation */
 const about = document.querySelector("#about");
-console.log(about);
 
 const options = {
 	root: null,
@@ -69,14 +68,14 @@ galleryImages.forEach(e => {
 		const imageSource = event.target.src;
 		focusImage.src = imageSource;
 		focusImage.alt = altTag;
-		focusImageContainer.classList.remove("hidden");
+		focusImageContainer.classList.remove("fade-out");
 		body.scroll = "no";
-		body.style.overflow = "hidden";
+		body.classList.add("lock");
 	});
 });
 
 focusImageContainer.addEventListener("click", () => {
-	focusImageContainer.classList.add("hidden");
+	focusImageContainer.classList.add("fade-out");
 	body.scroll = "yes";
-	body.style.overflow = "visible";
+	body.classList.remove("lock");
 });
