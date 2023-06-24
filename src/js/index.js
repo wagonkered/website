@@ -14,11 +14,13 @@ hamburger.addEventListener("click", () => {
 	hamburger.classList.add("hidden");
 });
 
-close.addEventListener("click", () => {
+function closeMenu() {
 	menuItems.classList.remove("mobile-menu-open");
 	close.classList.add("hidden");
 	hamburger.classList.remove("hidden");
-});
+}
+close.addEventListener("click", closeMenu);
+menuItemLinks.forEach(m => m.addEventListener("click", closeMenu));
 
 function widthChange(mq) {
 	if (mq.matches) {
@@ -26,34 +28,40 @@ function widthChange(mq) {
 		menuItemLinks.forEach(e => e.classList.add("light-colour"));
 		hamburger.classList.add("hidden");
 		close.classList.add("hidden");
+		menuItemLinks.forEach(m => m.removeEventListener("click", closeMenu));
 	} else {
 		menuItems.classList.add("mobile-menu");
 		menuItemLinks.forEach(e => e.classList.remove("light-colour"));
 		hamburger.classList.remove("hidden");
+		menuItemLinks.forEach(m => m.addEventListener("click", closeMenu));
 	}
 }
 
-
 widthChange(mq);
-
 mq.addEventListener("change", widthChange);
 
 /* Sticky navigation */
-const about = document.querySelector("#about");
+const heroImage = document.querySelector(".hero-image");
+console.log(heroImage);
 
 const options = {
 	root: null,
-	rootMargin: "0px",
-	threshold: 1.0,
+	rootMargin: "-112px",
+	threshold: 0,
 };
 
-function handleIntersect(entry) {
-	console.log(entry);
+const header = document.querySelector("header");
+function handleIntersect(entries) {
+	const entry = entries[0];
+	if(!entry.isIntersecting)
+		header.classList.add("fixed");
+	else
+		header.classList.remove("fixed");
 }
 
 const observer = new IntersectionObserver(handleIntersect, options);
 
-observer.observe(about);
+observer.observe(heroImage);
 
 /* GALLERY */
 const focusImageContainer = document.querySelector(".focus-image-background");
