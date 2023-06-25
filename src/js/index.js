@@ -42,11 +42,10 @@ mq.addEventListener("change", widthChange);
 
 /* Sticky navigation */
 const heroImage = document.querySelector(".hero-image");
-console.log(heroImage);
 
 const options = {
 	root: null,
-	rootMargin: "-112px",
+	rootMargin: "0px",
 	threshold: 0,
 };
 
