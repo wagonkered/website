@@ -456,7 +456,7 @@ input, textarea {
 }
 
 .alert-success {
-    background-color: #4caf50;
+  background-color: #4caf50;
 }
 
 .alert-fail {
@@ -464,17 +464,22 @@ input, textarea {
 }
 
 .alert-warn {
-    background-color: #ffbf00;
+  background-color: #ffbf00;
 }
 
 .alert i {
-    float: left;
-    color: white;
+  float: left;
+  color: white;
 }
 
 .transparent {
-    opacity: 0;
-    transform: translateY(3rem);
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+iframe {
+  vertical-align: bottom;
+  margin-bottom: 2rem;
 }
 
 /* FOOTER */
@@ -495,5 +500,14 @@ footer div {
 .footer-icons {
   height: 1.5rem;
   margin: 0.5rem;
+  filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(51deg) brightness(92%) contrast(93%);
+  transition: filter 0.2s linear;
 }
 
+.instagram-icon:hover {
+  filter: invert(84%) sepia(43%) saturate(1896%) hue-rotate(325deg) brightness(102%) contrast(98%);
+}
+
+.facebook-icon:hover {
+  filter: invert(31%) sepia(80%) saturate(462%) hue-rotate(181deg) brightness(88%) contrast(86%);
+}
