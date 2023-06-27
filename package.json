@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.4",
     "css-minimizer-webpack-plugin": "^5.0.0",
     "file-loader": "^6.2.0",
