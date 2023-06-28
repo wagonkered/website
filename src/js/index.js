@@ -136,6 +136,8 @@ function onSubmit(token) {
 	console.log(token);
 }
 
+window.onSubmit = onSubmit;
+
 /* eslint-disable */
 function processForm(e) {
 	/* eslint-enable */
