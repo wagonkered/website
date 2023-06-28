@@ -130,9 +130,7 @@ function clearAlert() {
 	});
 }
 
-/* eslint-disable */
 function processForm(e) {
-	/* eslint-enable */
 	e.preventDefault();
 	clearAlert();
 	const URL = "https://api.wagonkered.co.uk/contact-us";
@@ -178,6 +176,6 @@ function processForm(e) {
 			clearForm(hiringOption, name, email, message);
 		});
 	});
-
-
 }
+
+window.processForm = processForm;
