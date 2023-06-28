@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html18>
 <html lang="en">
 
 <head>
@@ -16,6 +16,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<script src="https://www.google.com/recaptcha/api.js?render=6Ld4wNsmAAAAAPkXjpWmzUvP51CsoqE4_ZcAgKrY"></script>
 </head>
 
 <body>
@@ -152,7 +153,7 @@
 			</div>
 			<div class="card-column">
 				<div class="card">
-					<h2 class="card-header">Pre-paid bar</h2>
+					<h2 class="card-header">Pre-paid Bar</h2>
 					<div class="card-text">
 						Similar to cash bar except you can put a set amount of money behind the bar to provide your
 						guests with complimentary drinks. Once this set amount runs out then transfer to being a paying
@@ -177,7 +178,7 @@
 			</div>
 			<div class="card-column">
 				<div class="card">
-					<h2 class="card-header">Dry hire</h2>
+					<h2 class="card-header">Dry Hire</h2>
 					<div class="card-text">
 						If you would simply like to have the bar there but you supply your own drinks. We can supply the
 						glassware and staff.
@@ -191,6 +192,7 @@
 		<div class="row smallprint">
 			<div class="column">
 				<div><em>* This option comes with a minimum spend</em></div>
+				<div><em>Please note: for all options we require a minimum of 14 days to arrange a licence for you event</em></div>
 			</div>
 		</div>
 
@@ -210,17 +212,6 @@
 				</blockquote>
 				<div>- Vicky North</div>
 			</div>
-			<!--
-			<div class="column">
-				<blockquote>
-					Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
-					Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-					Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est
-					proident. Nostrud officia pariatur ut officia.
-				</blockquote>
-				<div>- David Jones</div>
-			</div>
-			-->
 		</div>
 	</section>
 
@@ -230,14 +221,19 @@
 			<div class="column">
 				<form onSubmit="processForm(event)">
 					<label for="option">Hiring Option: </label>
-					<input id="option" type="text" class="name-input" placeholder="Hiring Option" autocomplete="name" required />
+					<select id="option" class="name-input">
+						<option value="none">None</option>
+						<option value="Cash Bar">Cash Bar</option>
+						<option value="Pre-paid Bar">Pre-paid Bar</option>
+						<option value="Price per head">Price per head</option>
+						<option value="Dry Hire">Dry Hire</option>
+					</select>
 					<label for="name">Name: </label>
 					<input id="name" type="text" class="name-input" placeholder="Name" autocomplete="name" required />
 					<label for="email">Email Address: </label>
 					<input id="email" type="email" class="email-input" placeholder="myemail@mail.com" autocomplete="email" required />
 					<label for="message">Message: </label>
 					<textarea id="message" rows="4" cols="50" placeholder="Your message here" required></textarea>
-					<div class="g-recaptcha" data-sitekey=""></div>
 					<input class="form-submit" type="submit" />
 				</form>
 			</div>

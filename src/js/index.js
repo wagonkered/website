@@ -52,7 +52,7 @@ const options = {
 const header = document.querySelector("header");
 function handleIntersect(entries) {
 	const entry = entries[0];
-	if(!entry.isIntersecting)
+	if (!entry.isIntersecting)
 		header.classList.add("fixed");
 	else
 		header.classList.remove("fixed");
@@ -96,3 +96,88 @@ enquireButtons.forEach(e => {
 		document.getElementById("option").value = e.parentNode.parentNode.querySelector(".card-header").innerHTML;
 	});
 });
+
+
+/* CONTACT */
+
+function clearForm(hiringOption, name, email, message) {
+	hiringOption.value = "None";
+	name.value = "";
+	email.value = "";
+	message.value = "";
+}
+
+function feedbackToUser(result) {
+	if (result === "success") {
+		const successMessage = document.querySelector(".alert-success");
+		successMessage.classList.remove("transparent");
+	} else if (result === "fail") {
+		const failMessage = document.querySelector(".alert-fail");
+		failMessage.classList.remove("transparent");
+	} else if (result === "no-captcha") {
+		const failMessage = document.querySelector(".alert-warn");
+		failMessage.classList.remove("transparent");
+	}
+	setTimeout(clearAlert, 5000);
+}
+
+function clearAlert() {
+	const alerts = document.querySelectorAll(".alert");
+	alerts.forEach(alert => {
+		if (!alert.classList.contains("transparent")) {
+			alert.classList.add("transparent");
+		}
+	});
+}
+
+/* eslint-disable */
+function processForm(e) {
+	/* eslint-enable */
+	e.preventDefault();
+	clearAlert();
+	const URL = "https://api.wagonkered.co.uk/contact-us";
+
+	/* eslint-disable */
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6Ld4wNsmAAAAAPkXjpWmzUvP51CsoqE4_ZcAgKrY', { action: 'submit' }).then(function(token) {
+			/* eslint-enable */
+			// Add your logic to submit to your backend server here.
+			const hiringOption = document.querySelector("input[id=\"option\"]");
+			const name = document.querySelector("input[id=\"name\"]");
+			const email = document.querySelector("input[id=\"email\"]");
+			const message = document.querySelector("textarea[id=\"message\"]");
+			const data = {
+				hiringOption: hiringOption.value,
+				name: name.value,
+				email: email.value,
+				message: message.value,
+				/* eslint-disable */
+				token: token
+				/* eslint-enable */
+			};
+
+			const xhr = new XMLHttpRequest();
+			xhr.open("POST", URL, true);
+			xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+			// send the collected data as JSON
+			xhr.send(JSON.stringify(data));
+
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					feedbackToUser("success");
+				} else {
+					feedbackToUser("fail");
+				}
+			};
+
+			xhr.onerror = function() {
+				feedbackToUser("fail");
+			};
+
+			clearForm(hiringOption, name, email, message);
+		});
+	});
+
+
+}
