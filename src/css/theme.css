@@ -171,7 +171,7 @@ header img {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0 0 0 / 60%),rgba(0 0 0 / 60%)), url("../img/hero-image.jpeg");
+  background-image: linear-gradient(rgba(0 0 0 / 60%),rgba(0 0 0 / 60%)), url("../img/blue-sky.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -211,7 +211,7 @@ h1 {
 }
 
 .column {
-  margin: 3rem auto;
+  margin: 2rem auto;
   width: 100%;
 }
 
@@ -409,8 +409,8 @@ input, textarea, .g-recaptcha {
 }
 
 input, textarea {
-  background-color: #f0f0f0;
-  border: solid 1px #f0f0f0;
+  background-color: #F3F3F3;
+  border: solid 1px #F3F3F3;
   padding: 10px;
 }
 
