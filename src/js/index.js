@@ -45,7 +45,7 @@ const heroImage = document.querySelector(".hero-image");
 
 const options = {
 	root: null,
-	rootMargin: "0px",
+	rootMargin: "-1px",
 	threshold: 0,
 };
 
@@ -85,4 +85,14 @@ focusImageContainer.addEventListener("click", () => {
 	focusImageContainer.classList.add("fade-out");
 	body.scroll = "yes";
 	body.classList.remove("lock");
+});
+
+/* HIRING OPTION */
+
+const enquireButtons = document.querySelectorAll(".enquire .call-to-action");
+
+enquireButtons.forEach(e => {
+	e.addEventListener("click", () => {
+		document.getElementById("option").value = e.parentNode.parentNode.querySelector(".card-header").innerHTML;
+	});
 });
