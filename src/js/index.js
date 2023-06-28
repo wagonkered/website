@@ -140,7 +140,7 @@ function processForm(e) {
 		grecaptcha.execute('6Ld4wNsmAAAAAPkXjpWmzUvP51CsoqE4_ZcAgKrY', { action: 'submit' }).then(function(token) {
 			/* eslint-enable */
 			// Add your logic to submit to your backend server here.
-			const hiringOption = document.querySelector("input[id=\"option\"]");
+			const hiringOption = document.getElementById("option");
 			const name = document.querySelector("input[id=\"name\"]");
 			const email = document.querySelector("input[id=\"email\"]");
 			const message = document.querySelector("textarea[id=\"message\"]");
