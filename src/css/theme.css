@@ -406,9 +406,6 @@ form {
 input, textarea, select {
   border-radius: 5px;
   margin-bottom: 20px;
-}
-
-input, textarea, select {
   background-color: #F3F3F3;
   border: solid 1px #F3F3F3;
   padding: 10px;
