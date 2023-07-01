@@ -403,7 +403,7 @@ form {
   }
 }
 
-input, textarea, select, .g-recaptcha {
+input, textarea, select {
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -488,7 +488,7 @@ input, textarea, select {
   transform: translateY(3rem);
 }
 
-iframe {
+.facebook-feed {
   vertical-align: bottom;
   margin: 5rem 0 2rem;
 }
