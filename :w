@@ -22,9 +22,9 @@
 <body>
 	<header>
 		<nav>
-			<img class="menu-icons hamburger hidden" src="icons/menu-outline.svg" alt="hamburger icon"
+			<img class="menu-icons hamburger hidden" src="icons/menu-outline.svg" alt="menu icon"
 				name="menu-outline"></img>
-			<img class="menu-icons close hidden" src="icons/close-outline.svg" alt="cross icon"
+			<img class="menu-icons close hidden" src="icons/close-outline.svg" alt="close icon"
 				name="close-outline"></img>
 			<a href="#">
 				<img src="img/wagonkered-logo.png" alt="Wagonkered Logo">
@@ -54,29 +54,30 @@
 				</div>
 			</div>
 			<div class="column">
-				<img class="column-image" src="img/bar-under-tent.jpg" alt="Bar under festival tent">
+				<img class="column-image" src="img/bar-under-tent.jpg" alt="">
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<img class="column-image" src="img/hero-image.jpeg" alt="Johnny VW bar in a field">
+				<img class="column-image" src="img/hero-image.jpeg" alt="">
 			</div>
 			<div class="column">
-				<h2 class="text-block-header">Johnny the VW cab</h2>
+				<h2 class="text-block-header">Johnny, the Volkswagen cab</h2>
 				<div class="text-block">
-					Johnny is a fully road legal 1970 low light single VW cab imported from Italy in 2014. Johnny, as we have named him, has been totally re-built, re-sprayed, re-trimmed and is now a fully functional bar created in the back, serving a range of alcoholic and soft drinks.
+					The bar is a fully road legal 1970 low light single cab VW imported from Italy in 2014. <em>Johnny</em>, as we have named the him, has been totally re-built, re-sprayed, re-trimmed and is now a fully functional bar created in the back, serving a range of alcholic and soft drinks.
 				</div>
 			</div>
 		</div>
+		<!--
 		<div class="row">
 			<div class="column">
-				<h2 class="text-block-header">Stan the 1979 VW</h2>
+				<h2 class="text-block-header">Stan, the 1979 VW</h2>
 				<div class="text-block">
-					Stan is a fully road legal 1978 VW pickup. He has been completely re-built, re-sprayed in the Wagonkered colours and also installed with a state of the art stainless steel frame which houses all of the beer taps and optics. He is perfect for large events and festivals!
+					Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
 				</div>
 			</div>
 			<div class="column">
-				<img class="column-image" src="img/stan-in-front-of-building.jpeg" alt="Stan VW in front of a building">
+				<img class="column-image" src="img/van-and-bar.jpg" alt="">
 			</div>
 		</div>
 		-->
@@ -85,21 +86,21 @@
 				<h2 class="text-block-header center">Drinks we serve</h2>
 				<div class="text-block">
 					<ul class="options">
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>German beers</li>
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>Local Ales</li>
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>Ciders</li>
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>Wines</li>
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>Champagne</li>
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>Spirits</li>
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>Cocktails</li>
-						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="beer icon"
+						<li class="option"><img class="menu-icons beer" src="icons/beer-outline.svg" alt="menu icon"
 								name="menu-outline"></img>Soft Drinks</li>
 					</ul>
 				</div>
@@ -220,13 +221,17 @@
 		<h1 class="summary">Contact</h1>
 		<div class="row">
 			<div class="column">
-				<a class="phone-link" href="tel:+447807901471">
-					<img class="phone" src="icons/call-outline.svg" alt="telephone icon"
-						name="call-outline"></img>
+				<div class="column">
 					<div>
-						07807 901471
-					</div>
-				</a>
+						<a class="phone-link" href="tel:+447807901471">
+							<img class="phone" src="icons/call-outline.svg" alt="telephone"
+								name="call-outline"></img>
+							<div>
+								07807 901471
+							</div>
+						</a>
+					</div>	
+				</div>
 				<form onSubmit="processForm(event)">
 					<label for="option">Hiring Option: </label>
 					<select id="option" class="name-input">

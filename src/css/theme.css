@@ -490,6 +490,18 @@ input, textarea, select {
   margin: 5rem 0 2rem;
 }
 
+.phone-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.phone {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
 /* FOOTER */
 
 footer {
