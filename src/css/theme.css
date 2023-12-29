@@ -171,7 +171,7 @@ header img {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0 0 0 / 60%),rgba(0 0 0 / 60%)), url("../img/blue-sky.jpg");
+  background-image: linear-gradient(rgba(0 0 0 / 40%),rgba(0 0 0 / 40%)), url("../img/blue-sky.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -232,7 +232,7 @@ h1 {
 }
 
 .column-image {
-  max-height: 30vh;
+  max-height: 50vh;
   max-width: 90%;
   text-align: center;
   display: block;
