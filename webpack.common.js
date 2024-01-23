@@ -43,7 +43,6 @@ module.exports = {
 						  type: 'src',
 						  // Only load resources for a href tags where href is a pdf
 						  filter: (tag, attribute, attributes, resourcePath) => {
-							console.log(attributes);
 							let result = false;
 							for(const a of attributes) {
 								if (a.name === "href" && /\.pdf$/.test(a.value)) {
