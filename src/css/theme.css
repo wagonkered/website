@@ -234,6 +234,9 @@ h1 {
 .column {
   margin: 2rem auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .image-container {
