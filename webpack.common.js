@@ -21,8 +21,22 @@ module.exports = {
 		rules: [
 			{
 				test: /\.html$/,
-				use: ["html-loader"]
+				loader: "html-loader",
+				options: {
+					sources: {
+					  list: [
+						'...',
+						// Enables loading of <a href=""></a> used for pdfs
+						{
+						  tag: 'a',
+						  attribute: 'href',
+						  type: 'src'
+						}
+					  ]
+					}
+				  }
 			},
+
 			{
 				test: /\.(pdf|svg|png|jpg|gif)$/,
 				type: "asset/resource",
