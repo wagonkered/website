@@ -109,11 +109,9 @@ function clearForm(hiringOption, name, email, message) {
 
 function feedbackToUser(result) {
 	if (result === "success") {
-		const successMessage = document.querySelector(".alert-success");
-		successMessage.classList.remove("transparent");
+		window.location.href = "/submitted.html?res=success";
 	} else if (result === "fail") {
-		const failMessage = document.querySelector(".alert-fail");
-		failMessage.classList.remove("transparent");
+		window.location.href = "/submitted.html?res=fail";
 	} else if (result === "no-captcha") {
 		const failMessage = document.querySelector(".alert-warn");
 		failMessage.classList.remove("transparent");
