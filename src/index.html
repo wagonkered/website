@@ -1,4 +1,4 @@
-<!DOCTYPE html18>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -51,14 +51,17 @@
 
 				<div class="text-block">Wagonkered is a family run mobile bar service based in the heart of Somerset, run by husband & wife duo – Sophie & Matt. Whether you are organising a wedding, festival, party or corporate event, we would love to help! We are fully licensed, insured and have a range of packages available to suit all events. We are dedicated to going to extra mile to ensure your event runs smoothly.</div>
 			</div>
-			<!-- TODO: Vertically centre image -->
-			<div class="column column-image-container">
-				<img class="column-image" src="img/bar-under-tent.jpg" alt="Bar under festival tent">
+			<div class="column image-container">
+				<div>
+					<img class="column-image" src="img/bar-under-tent.jpg" alt="Bar under festival tent">
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="column">
-				<img class="column-image" src="img/hero-image.jpeg" alt="Johnny VW bar in a field">
+			<div class="column image-container">
+				<div>
+					<img class="column-image" src="img/hero-image.jpeg" alt="Johnny VW bar in a field">
+				</div>
 			</div>
 			<div class="column">
 				<h2 class="text-block-header">Johnny the VW cab</h2>
@@ -70,8 +73,10 @@
 				<h2 class="text-block-header">Stan the 1979 VW</h2>
 				<div class="text-block">Stan is a road legal 1978 VW pickup. He has been rebuilt and resprayed to match the Wagonkered colours. We have also installed a state-of-the-art stainless-steel frame which houses all the beer taps & optics. Stan is perfect for large events & festivals.</div>
 			</div>
-			<div class="column">
-				<img class="column-image" src="img/stan-in-front-of-building.jpeg" alt="Stan VW in front of a building">
+			<div class="column image-container">
+				<div>
+					<img class="column-image" src="img/stan-in-front-of-building.jpeg" alt="Stan VW in front of a building">
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -100,21 +105,22 @@
 			</div>
 		</div>
 		<div class="row">
-			<!-- TODO: Fix styling on buttons -->
 			<!-- TODO: Add links to pdf -->
 			<div class="column">
-				<div class="enquire">
-					<a class="call-to-action" href="#">Bar Tariff</a>
+				<div class="standalone-btn">
+					<a class="call-to-action" href="pdfs/bar-tariff.pdf">Bar Tariff</a>
 				</div>
-				<div class="enquire">
-					<a class="call-to-action" href="#contact">Cocktail Menu</a>
-				</div>
-				<div class="enquire">
-					<a class="call-to-action" href="#contact">Wine lists</a>
-				</div>
-				
 			</div>
-			
+			<div class="column">
+				<div class="standalone-btn">
+					<a class="call-to-action" href="#">Cocktail Menu</a>
+				</div>
+			</div>
+			<div class="column">
+				<div class="standalone-btn">
+					<a class="call-to-action" href="#">Wine lists</a>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -143,7 +149,7 @@
 					src="img/van-in-courtyard.jpg">
 			</div>
 			<div class="focus-image-background fade-out">
-				<img loading="lazy" alt="Pianissami portrait shot" src="img/wagonkered-van-profile.jpg">
+				<img loading="lazy" alt="Profile shot of the Wagonkered van" src="img/wagonkered-van-profile.jpg">
 			</div>
 		</div>
 	</section>
@@ -171,9 +177,8 @@
 			<div class="card-column">
 				<div class="card">
 					<h2 class="card-header">Pre-paid Bar</h2>
-					<!-- TODO Stylise href link -->
 					<div class="card-text">With our pre-paid bar, the host can either pay a fixed cost per head or run a
-						tab for the duration of the event.<!-- View our <a href="#">pre-paid options.</a></div>-->
+						tab for the duration of the event. View our <a class="animated-link" href="#">pre-paid options.</a></div>
 					<div class="enquire">
 						<a class="call-to-action" href="#contact">Enquire</a>
 					</div>
@@ -198,10 +203,9 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="column">
-				<div class="card">
+			<div class="single-card-column">
+				<div class="card single-card">
 					<h2 class="card-header">Bespoke packages</h2>
-					<!-- TODO Make narrower -->
 					<div class="card-text">We understand that every event is different, and we are happy to let you put your stamp on our offering and service. We would love to work with you to tailor a package to meet your requirements, from cocktails to spirits, from table wine to welcome drinks, lets do your day… your way!</div>
 				</div>
 				
@@ -293,7 +297,7 @@
 			<div>Wagonkered Mobile Bar</div>
 			<div>© 2023</div>
 		</div>
-		<div>Website by <a href="https://joshuacrunden.com">Joshua Crunden</a></div>
+		<div>Website by <a class="animated-link" href="https://joshuacrunden.com">Joshua Crunden</a></div>
 		<div>
 			<a href="https://www.instagram.com/wagonkered/"><img class="footer-icons instagram-icon" src="icons/logo-instagram.svg"
 					alt="instagram logo" name="logo-instagram"></a>
