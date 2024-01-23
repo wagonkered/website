@@ -113,6 +113,8 @@ function feedbackToUser(result) {
 	} else if (result === "fail") {
 		window.location.href = "/submitted.html?res=fail";
 	} else if (result === "no-captcha") {
+		const failMessage = document.querySelector(".alert-warn");
+		failMessage.classList.remove("transparent");
 	}
 	setTimeout(clearAlert, 5000);
 }
@@ -168,6 +170,8 @@ function processForm(e) {
 			xhr.onerror = function() {
 				feedbackToUser("fail");
 			};
+
+			clearForm(hiringOption, name, email, message);
 		});
 	});
 }

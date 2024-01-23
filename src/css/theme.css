@@ -29,10 +29,10 @@ html {
 
 .animated-link::before {
   content: '';
-  background-color:	hsl(51, 100%, 50%, 0.6);
+  background-color:	#ffd900;
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   height: 3px;
   z-index: -1;
