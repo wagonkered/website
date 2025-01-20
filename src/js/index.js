@@ -147,9 +147,7 @@ function processForm(e) {
 				name: name.value,
 				email: email.value,
 				message: message.value,
-				/* eslint-disable */
 				token: token
-				/* eslint-enable */
 			};
 
 			const xhr = new XMLHttpRequest();
